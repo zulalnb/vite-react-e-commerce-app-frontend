@@ -23,7 +23,7 @@ function App() {
         <Navbar />
         <div id="content">
           <Routes>
-            <Route path="/" element={<Products />} />
+            <Route path="/" index element={<Products />} />
             <Route path="/product/:product_id" element={<ProductDetail />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
@@ -43,7 +43,7 @@ function App() {
                 </ProtectedRoute>
               }
             >
-              <Route path="" element={<Home />} />
+              <Route index element={<Home />} />
               <Route path="orders" element={<Orders />} />
               <Route path="products" element={<AdminProducts />} />
               <Route path="products/new" element={<NewProduct />} />
